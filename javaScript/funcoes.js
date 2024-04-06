@@ -7,7 +7,7 @@ function somar(){
     num2 = parseInt(document.getElementById("tsNum").value);
     //Realizando o cálculo
     res = num1 + num2;
-    document.getElementById("resultado").innerHTML = "A soma dos números é: " + res;
+    document.getElementById("resultado").value = "A soma dos números é: " + res;
 }//fim do método
 
 function subtrair(){
@@ -19,7 +19,7 @@ function subtrair(){
     num2 = parseInt(document.getElementById("tsNum").value);
     //Realizando o cálculo
     res = num1 - num2;
-    document.getElementById("resultado").innerHTML = "A subtração dos números é: " + res;
+    document.getElementById("resultado").value = "A subtração dos números é: " + res;
 }//fim do método
 
 function multiplicar(){
@@ -31,7 +31,7 @@ function multiplicar(){
     num2 = parseInt(document.getElementById("tsNum").value);
     //Realizando o cálculo
     res = num1 * num2;
-    document.getElementById("resultado").innerHTML = "A multiplicação dos números é: " + res;
+    document.getElementById("resultado").value = "A multiplicação dos números é: " + res;
 }//fim do método
 
 function dividir(){
@@ -48,7 +48,7 @@ function dividir(){
         res = num1 / num2;
     }
     //Faço a resposta
-    document.getElementById("resultado").innerHTML = "A divisão dos números é: " + res;
+    document.getElementById("resultado").value = "A divisão dos números é: " + res;
 }//fim do método
 
 function tabuada(){
@@ -66,7 +66,7 @@ function tabuada(){
         resNum2 += "\n" + num2 + " * " + i + " = " + (num2 * i);
     }
 
-    document.getElementById("resultado").innerHTML = "\n" + resNum1 + "\n\n" + resNum2;
+    document.getElementById("resultado").value = "\n" + resNum1 + "\n\n" + resNum2;
 }//fim do método
 
 function potencia(){
@@ -85,7 +85,7 @@ function potencia(){
    document.getElementById("resultado").value="O resultado da potência é:" + resultado;
 }//fim do método
 
-function RaizQuadrada(){
+function raizQuadrada(){
     var num1; 
     var num2;
 
@@ -96,9 +96,78 @@ function RaizQuadrada(){
 
         document.getElementById("resultado").value= "\n\nA raíz de: " + num1 + "é"+ Math.sqrt(num1)
         + "\n\nA raíz de:" + num2 + "é" + Math.sqrt(num2)
-}//fim d
+}//fim do método
+
+function bhaskara(){
+    var a;
+    var b;
+    var c;
+    var delta;
+    var x1;
+    var x2;
+    var resposta;
+
+    a = parseInt(document.getElementById("tpNum").value);
+    b = parseInt(document.getElementById("tsNum").value);
+    c = parseInt(document.getElementById("ttNum").value);
+
+    delta = Math.pow(b,2) - 4 * a * c;
+
+    if (delta <= 0){
+        resposta = "Delta é igual a: " + delta + " .Impossível fazer a operação. O resultado de delta não pode ser menor ou igual a zero";
+    }else{
+
+        x1 = (-b + Math.sqrt(delta)) / (2 * a);
+        x2 = (-b - Math.sqrt(delta)) / (2 * a);
+
+        resposta = "x1 é igual a: " + x1 + "\nx2 é igual a: " + x2;
+    }
+        
+    document.getElementById("resultado").value = "Delta é igual a: " + delta + "\n" + resposta;
+}//fim do metodo
+
+//EXERCÍCIOS
+
+//Exercício1
+function contarDez(){
+    var res = "Números de 1 a 10: ";
+
+    for(i = 1; i <= 10; i++){
+        res += "\n" + i; 
+    }
+
+    document.getElementById("resultado").value = "\n" + res;
+}//Fim do método
+
+//Exercicio2
+function contarPares(){
+        var num1; 
+        var num2;
+        var res = "Pares de 1 a 20:";
+    
+        for(i = 1; i <= 20; i++){
+            if(i % 2 == 0 ){
+                res += "\n" + i; 
+            }
+        }
+    
+        document.getElementById("resultado").value = "\n" + res;
+    }//Fim do método
 
 
+
+//Exercício3
+function somarCem(){
+        var soma = 0;
+    
+        for(i = 1; i <= 100; i++){
+                soma += i;   
+            }
+    
+        document.getElementById("resultado").value = soma;
+    }//Fim do método
+
+//Exercício4
 
     
 
