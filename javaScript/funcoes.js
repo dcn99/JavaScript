@@ -168,8 +168,25 @@ function somarCem(){
     }//Fim do método
 
 //Exercício4
+function multiplosDeCinco(){
+    var res = "Multiplos de 5, de 1 a 50" ;
+
+    for(i = 5; i <= 50; i++){
+        if(i % 5 == 0 ){
+            res += "\n" + i; 
+        }
+    }
+    document.getElementById("resultado").value = res;
+}//Fim do método
+
+//Exercício5
+function deUmAteNum(){
+    var num;
+    var res;
+
+    for(i = 1; i<num1; i++){
 
     
+    }
 
-
-    
+}
